@@ -1,0 +1,26 @@
+server:
+  port: 7072
+
+spring:
+  application:
+    name: server-gateway
+
+  cloud:
+    gateway:
+      routes:
+      - id: srv-clients
+        uri: http://${CLIENTS_HOST:localhost}:8081/
+        predicates:
+        - Path=/clients/**
+      - id: srv-products
+        uri: http://${PRODUCTS_HOST:localhost}:8082/
+        predicates:
+        - Path=/products/**
+      - id: srv-bills
+        uri: http://${BILLS_HOST:localhost}:8083/
+        predicates:
+        - Path=/bills/**
+    
+management:
+    server:
+      port: 6172
