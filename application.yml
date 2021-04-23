@@ -27,3 +27,13 @@ eureka:
     service-url:
       defaultZone: ${EUREKA_SERVER:http://localhost:7071/eureka}
     registry-fetch-interval-seconds: 5
+
+management:
+  endpoint:
+    metrics:
+      enabled: true
+  endpoints:
+    web:
+      base-path: /monitor/actuator
+      exposure:
+        include: "*"

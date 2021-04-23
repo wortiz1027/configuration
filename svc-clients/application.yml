@@ -1,0 +1,25 @@
+server:
+  port: 8082
+  servlet:
+    context-path: /clients
+
+spring:
+  application:
+    name: svc-clients
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://${DB_CLIENTS_HOST:localhost}:3303/clientsdb
+    username: clients
+    password: clients2021++
+
+management:
+    server:
+      port: 6182
+
+logging:
+  level:
+    org.springframework.web: DEBUG
+    co.com.demo.clients: DEBUG
+  pattern:
+    console: "%d{yyyy-MMM-dd HH:mm:ss a} [%t] %-5level %logger{36} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"

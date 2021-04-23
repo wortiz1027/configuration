@@ -1,0 +1,25 @@
+server:
+  port: 8083
+  servlet:
+    context-path: /products
+
+spring:
+  application:
+    name: svc-products
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://${DB_PRODUCTS_HOST:localhost}:3303/productsdb
+    username: products
+    password: products2021++
+
+management:
+    server:
+      port: 6183
+
+logging:
+  level:
+    org.springframework.web: DEBUG
+    co.com.demo.products: DEBUG
+  pattern:
+    console: "%d{yyyy-MMM-dd HH:mm:ss a} [%t] %-5level %logger{36} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
