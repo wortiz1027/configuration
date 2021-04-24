@@ -8,7 +8,7 @@ spring:
     name: svc-bills
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://${DB_BILLS_HOST:localhost}:3303/billsdb
+    url: jdbc:mysql://${DB_BILLS_HOST:localhost}:3301/billsdb
     username: bills
     password: bills2021++
 
