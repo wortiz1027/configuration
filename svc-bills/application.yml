@@ -19,7 +19,7 @@ spring:
 rest:
   products:
     services-id: svc-products
-    uri: /products/api/v1/products/informations
+    uri: /products/api/v1/products/
 
 
 events:
