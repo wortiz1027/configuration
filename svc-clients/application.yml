@@ -12,6 +12,12 @@ spring:
     username: clients
     password: clients2021++
 
+events:
+  rpc:
+    exchange: images-exchange-events
+    queue: image-queue-request
+    routing-key: images-events-key
+
 management:
     server:
       port: 6182
