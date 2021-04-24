@@ -16,11 +16,11 @@ events:
   rpc:
     products:
         exchange: products-exchange-events
-        queue: products-queue-query-request
+        queue: products-queue-request
         routing-key: products-events-key
     clients:
         exchange: clients-exchange-events
-        queue: clients-queue-query-response
+        queue: clients-queue-request
         routing-key: clients-events-key
 
 management:
