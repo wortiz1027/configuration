@@ -14,9 +14,9 @@ spring:
 
 events:
   rpc:
-    exchange: images-exchange-events
-    queue: image-queue-request
-    routing-key: images-events-key
+    exchange: clients-exchange-events
+    queue: clients-queue-request
+    routing-key: clients-events-key
 
 management:
     server:
