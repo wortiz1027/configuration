@@ -3,10 +3,10 @@
 # +-----------------------------------------------------
 spring:
   rabbitmq:
-    host: "${RABBITMQ_HOST:localhost}"
+    host: "${SERVER_BROKER:localhost}"
     port: 5672
-    username: "${RABBITMQ_USER:spike}"
-    password: "${RABBITMQ_PASS:Spike2021++}"
+    username: "${SERVER_BROKER:spike}"
+    password: "${SERVER_BROKER:Spike2021++}"
     listener:
       simple:
         retry:
@@ -21,11 +21,11 @@ spring:
 # +-----------------------------------------------------
 eureka:
   instance:
-    hostname: ${EUREKA_HOST:server-discovery}
+    hostname: ${SERVER_DISCOVERY_HOST:server-discovery}
   client:
     region: default
     service-url:
-      defaultZone: ${EUREKA_SERVER:http://localhost:7071/eureka}
+      defaultZone: ${SERVER_DISCOVERY:http://localhost:7071/eureka}
     registry-fetch-interval-seconds: 5
 
 management:

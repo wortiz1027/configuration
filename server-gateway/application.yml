@@ -13,15 +13,15 @@ spring:
     gateway:
       routes:
       - id: srv-bills
-        uri: http://${BILLS_HOST:localhost}:8081/
+        uri: http://${SVC_BILLS_HOST:localhost}:8081/
         predicates:
         - Path=/bills/**
       - id: srv-clients
-        uri: http://${CLIENTS_HOST:localhost}:8082/
+        uri: http://${SVC_CLIENTS_HOST:localhost}:8082/
         predicates:
         - Path=/clients/**
       - id: srv-products
-        uri: http://${PRODUCTS_HOST:localhost}:8083/
+        uri: http://${SVC_PRODUCTS_HOST:localhost}:8083/
         predicates:
         - Path=/products/**
 
