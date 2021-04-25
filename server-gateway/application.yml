@@ -15,15 +15,15 @@ spring:
       - id: srv-bills
         uri: http://${BILLS_HOST:localhost}:8081/
         predicates:
-        - Path=/b/**
+        - Path=/bills/**
       - id: srv-clients
         uri: http://${CLIENTS_HOST:localhost}:8082/
         predicates:
-        - Path=/c/**
+        - Path=/clients/**
       - id: srv-products
         uri: http://${PRODUCTS_HOST:localhost}:8083/
         predicates:
-        - Path=/p/**
+        - Path=/products/**
 
 logging:
   level:
