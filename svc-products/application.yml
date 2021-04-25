@@ -8,7 +8,7 @@ spring:
     name: svc-products
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://${DB_PRODUCTS_HOST:localhost}:3303/productsdb
+    url: jdbc:mysql://${DB_PRODUCTS_HOST:localhost}:${DB_PRODUCTS_PORT:3303}/productsdb
     username: products
     password: products2021++
 
