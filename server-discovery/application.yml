@@ -16,4 +16,4 @@ eureka:
     
 management:
     server:
-      port: 6071
+      port: 6171
